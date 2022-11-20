@@ -7,9 +7,9 @@
 		".": "./src/index.ts"
 	},
 	"scripts": {
-		"build": "shx rm -rf dist && tsc",
-		"start": "node .",
-		"dev": "ts-node-dev --watch src src/index.ts"
+		"dev": "ts-node-dev --watch src src/index.ts",
+		"build": "prisma generate && shx rm -rf dist && tsc",
+		"start": "node ."
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.12",
