@@ -1,7 +1,5 @@
 name: Deploy API
-
 on: [push]
-
 jobs:
     deploy:
         name: Deploy API
