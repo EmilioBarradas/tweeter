@@ -5,7 +5,7 @@ import type { API } from 'api';
 export const trpc = createTRPCProxyClient<API>({
 	links: [
 		httpBatchLink({
-			url: 'http://localhost:17146/api',
+			url: process.env.API_ENDPOINT ?? '',
 		}),
 	],
 });

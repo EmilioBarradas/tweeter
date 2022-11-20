@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { invalidatePosts } from '$lib/stores/timeline';
-	import { isSignedIn, user } from '$lib/stores/user';
-	import { trpc } from '$lib/trpc';
+	import { invalidatePosts } from '$lib/stores/timeline.js';
+	import { isSignedIn, user } from '$lib/stores/user.js';
+	import { trpc } from '$lib/trpc.js';
 	import type { PostWithComments } from 'api';
 	import PostContent from './PostContent.svelte';
 

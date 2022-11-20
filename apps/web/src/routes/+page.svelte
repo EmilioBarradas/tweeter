@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Post from '$lib/components/Post.svelte';
-	import { auth } from '$lib/firebase';
-	import { invalidatePosts, timeline } from '$lib/stores/timeline';
-	import { isSignedIn, user } from '$lib/stores/user';
-	import { trpc } from '$lib/trpc';
+	import { auth } from '$lib/firebase.js';
+	import { invalidatePosts, timeline } from '$lib/stores/timeline.js';
+	import { isSignedIn, user } from '$lib/stores/user.js';
+	import { trpc } from '$lib/trpc.js';
 	import { GoogleAuthProvider, signInWithPopup, signOut as signOutAuth } from 'firebase/auth';
 
 	let text = '';
