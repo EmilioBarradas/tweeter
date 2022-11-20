@@ -2,8 +2,13 @@
 	"name": "api",
 	"private": true,
 	"version": "0.0.0",
+	"main": "dist/index.js",
+	"exports": {
+		".": "./src/index.ts"
+	},
 	"scripts": {
 		"build": "shx rm -rf dist && tsc",
+		"start": "node .",
 		"dev": "ts-node-dev --watch src src/index.ts"
 	},
 	"devDependencies": {

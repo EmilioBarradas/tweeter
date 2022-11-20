@@ -3,13 +3,13 @@ import cors from "cors";
 import express from "express";
 import { router } from "./routers";
 
-const PORT = 17146;
-
 export const startServer = () => {
 	const app = express();
 
 	app.use(cors());
 	app.use("/api", createExpressMiddleware({ router }));
 
-	app.listen(PORT, () => console.log(`Started server on port ${PORT}.`));
+	app.listen(Number(process.env.PORT ?? 3000), "0.0.0.0", () =>
+		console.log(`Started server on port 8080.`)
+	);
 };
