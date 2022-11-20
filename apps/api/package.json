@@ -9,8 +9,7 @@
 	"scripts": {
 		"dev": "ts-node-dev --watch src src/index.ts",
 		"build": "prisma generate && shx rm -rf dist && tsc",
-		"start:dev": "node .",
-		"start": "prisma migrate deploy && node ."
+		"start": "node ."
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.12",
