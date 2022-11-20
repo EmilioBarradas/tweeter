@@ -1,12 +1,12 @@
 import { createTRPCProxyClient } from '@trpc/client';
 import { httpBatchLink } from '@trpc/client/links/httpBatchLink';
 import type { API } from 'api';
-import { PUBLIC_API_ENDPOINT } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 
 export const trpc = createTRPCProxyClient<API>({
 	links: [
 		httpBatchLink({
-			url: PUBLIC_API_ENDPOINT ?? '',
+			url: env.LOCAL_API_ENDPOINT ?? env.PUBLIC_API_ENDPOINT ?? '',
 		}),
 	],
 });
